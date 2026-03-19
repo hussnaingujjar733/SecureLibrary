@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Register — SecureLibrary</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<nav class="navbar">
+    <a class="brand" th:href="@{/books}">📚 SecureLibrary</a>
+    <div class="nav-links">
+        <a th:href="@{/auth/login}">Login</a>
+        <a th:href="@{/auth/register}" class="btn-primary">Register</a>
+    </div>
+</nav>
+<main class="container">
+    <div class="auth-card">
+        <h2>Create Account</h2>
+
+        <div th:if="${error}" class="alert alert-error" th:text="${error}"></div>
+
+        <form th:action="@{/auth/register}" method="post">
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+
+            <div class="form-group">
+                <label for="username">Username (3–50 characters)</label>
+                <input type="text" id="username" name="username"
+                       required minlength="3" maxlength="50" autocomplete="username"/>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email"
+                       required maxlength="100" autocomplete="email"/>
+            </div>
+            <div class="form-group">
+                <label for="password">Password (min 8 characters)</label>
+                <input type="password" id="password" name="password"
+                       required minlength="8" maxlength="100" autocomplete="new-password"/>
+            </div>
+            <button type="submit" class="btn-primary btn-full">Register</button>
+        </form>
+
+        <p class="auth-link">Already have an account? <a th:href="@{/auth/login}">Login</a></p>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Error — SecureLibrary</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<nav class="navbar">
+    <a class="brand" th:href="@{/books}">📚 SecureLibrary</a>
+</nav>
+<main class="container">
+    <div class="auth-card" style="text-align:center">
+        <h1 th:text="${status}">Error</h1>
+        <p th:text="${message}">An error occurred.</p>
+        <a th:href="@{/books}" class="btn-primary">← Back to Home</a>
+    </div>
+</main>
+</body>
+</html>

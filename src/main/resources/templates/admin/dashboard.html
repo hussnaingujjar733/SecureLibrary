@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Admin Panel — SecureLibrary</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<nav class="navbar">
+    <a class="brand" th:href="@{/books}">📚 SecureLibrary</a>
+    <div class="nav-links">
+        <a th:href="@{/books}">Books</a>
+        <a th:href="@{/admin}">Admin Panel</a>
+        <span class="user-info">👤 <sec:authentication property="name"/> (Librarian)</span>
+        <form th:action="@{/auth/logout}" method="post" style="display:inline">
+            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+            <button type="submit" class="btn-logout">Logout</button>
+        </form>
+    </div>
+</nav>
+<main class="container">
+    <div th:if="${param.bookSaved}" class="alert alert-success">Book saved successfully.</div>
+    <div th:if="${param.bookDeleted}" class="alert alert-success">Book deleted.</div>
+
+    <h1>Admin Dashboard</h1>
+
+    <!-- ── Pending Borrow Requests ─────────────────────────── -->
+    <section class="admin-section">
+        <h2>⏳ Pending Borrow Requests
+            <span class="badge badge-yellow" th:text="${pendingRequests.size()}">0</span>
+        </h2>
+        <div th:if="${pendingRequests.empty}" class="empty-state"><p>No pending requests.</p></div>
+        <table th:if="${!pendingRequests.empty}" class="data-table">
+            <thead>
+                <tr><th>User</th><th>Book</th><th>Requested</th><th>Actions</th></tr>
+            </thead>
+            <tbody>
+                <tr th:each="req : ${pendingRequests}">
+                    <td th:text="${req.user.username}">user</td>
+                    <td th:text="${req.book.title}">book</td>
+                    <td th:text="${#temporals.format(req.requestedAt, 'dd/MM/yyyy HH:mm')}">date</td>
+                    <td>
+                        <form th:action="@{/admin/borrow/{id}/approve(id=${req.id})}" method="post" style="display:inline">
+                            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+                            <button type="submit" class="btn-green">Approve</button>
+                        </form>
+                        <form th:action="@{/admin/borrow/{id}/reject(id=${req.id})}" method="post" style="display:inline">
+                            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+                            <button type="submit" class="btn-red">Reject</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- ── Book Management ────────────────────────────────── -->
+    <section class="admin-section">
+        <div class="section-header">
+            <h2>📚 Book Management</h2>
+            <a th:href="@{/admin/books/new}" class="btn-primary">+ Add Book</a>
+        </div>
+        <table class="data-table">
+            <thead>
+                <tr><th>Title</th><th>Author</th><th>Category</th><th>Copies</th><th>Actions</th></tr>
+            </thead>
+            <tbody>
+                <tr th:each="book : ${books}">
+                    <td th:text="${book.title}">title</td>
+                    <td th:text="${book.author}">author</td>
+                    <td th:text="${book.category}">cat</td>
+                    <td th:text="${book.availableCopies}">0</td>
+                    <td>
+                        <a th:href="@{/admin/books/{id}/edit(id=${book.id})}" class="btn-secondary">Edit</a>
+                        <form th:action="@{/admin/books/{id}/delete(id=${book.id})}" method="post" style="display:inline"
+                              onsubmit="return confirm('Delete this book?')">
+                            <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+                            <button type="submit" class="btn-red">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- ── All Requests History ───────────────────────────── -->
+    <section class="admin-section">
+        <h2>📋 All Borrow History</h2>
+        <table class="data-table">
+            <thead>
+                <tr><th>User</th><th>Book</th><th>Status</th><th>Date</th></tr>
+            </thead>
+            <tbody>
+                <tr th:each="req : ${allRequests}">
+                    <td th:text="${req.user.username}">u</td>
+                    <td th:text="${req.book.title}">b</td>
+                    <td>
+                        <span th:text="${req.status}"
+                              th:classappend="${req.status.name() == 'APPROVED'} ? 'badge-green' :
+                                              (${req.status.name() == 'REJECTED'} ? 'badge-red' : 'badge-yellow')"
+                              class="badge"></span>
+                    </td>
+                    <td th:text="${#temporals.format(req.requestedAt, 'dd/MM/yyyy')}">d</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</main>
+<footer class="footer"><p>SecureLibrary &copy; 2026</p></footer>
+</body>
+</html>
