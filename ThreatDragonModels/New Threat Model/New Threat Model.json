@@ -18,533 +18,6 @@
         "version": "2.6.1-RC1",
         "cells": [
           {
-            "position": {
-              "x": -3050,
-              "y": -1790
-            },
-            "size": {
-              "width": 110,
-              "height": 70
-            },
-            "attrs": {
-              "text": {
-                "text": "Users"
-              },
-              "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "actor",
-            "zIndex": 1,
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "10379a79-87bf-477f-b04d-149217777faa"
-                },
-                {
-                  "group": "right",
-                  "id": "1d05115e-8b26-4c05-9551-010855d0da4f"
-                },
-                {
-                  "group": "bottom",
-                  "id": "c0d287d7-be25-4a13-a250-1dd15e4ace4e"
-                },
-                {
-                  "group": "left",
-                  "id": "5433a2e4-2d5f-4250-9c4c-81df37ed91f8"
-                }
-              ]
-            },
-            "id": "63f10c4f-d734-488f-a985-798bb9c3b5cc",
-            "data": {
-              "type": "tm.Actor",
-              "name": "Users",
-              "description": "",
-              "isTrustBoundary": false,
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "providesAuthentication": false,
-              "threats": []
-            }
-          },
-          {
-            "position": {
-              "x": -2870,
-              "y": -1690
-            },
-            "size": {
-              "width": 60,
-              "height": 60
-            },
-            "attrs": {
-              "text": {
-                "text": "Web Servlet"
-              },
-              "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "process",
-            "zIndex": 2,
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "d270faa2-e117-477b-8fc6-484e800df137"
-                },
-                {
-                  "group": "right",
-                  "id": "a1698266-975d-4c76-a447-648d9d79fc90"
-                },
-                {
-                  "group": "bottom",
-                  "id": "7c009e7e-13b7-42e4-b9c9-ffcaa20db9e3"
-                },
-                {
-                  "group": "left",
-                  "id": "ebdc1f3f-9312-4d0e-93de-4216071bd711"
-                }
-              ]
-            },
-            "id": "04b5cd86-72e7-4224-a4f4-e08292ee7821",
-            "data": {
-              "type": "tm.Process",
-              "name": "Web Servlet",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "handlesCardPayment": false,
-              "handlesGoodsOrServices": false,
-              "isWebApplication": false,
-              "privilegeLevel": "",
-              "threats": []
-            }
-          },
-          {
-            "position": {
-              "x": -2690,
-              "y": -1790
-            },
-            "size": {
-              "width": 60,
-              "height": 60
-            },
-            "attrs": {
-              "text": {
-                "text": "Login Process"
-              },
-              "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "process",
-            "zIndex": 3,
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "d270faa2-e117-477b-8fc6-484e800df137"
-                },
-                {
-                  "group": "right",
-                  "id": "a1698266-975d-4c76-a447-648d9d79fc90"
-                },
-                {
-                  "group": "bottom",
-                  "id": "7c009e7e-13b7-42e4-b9c9-ffcaa20db9e3"
-                },
-                {
-                  "group": "left",
-                  "id": "ebdc1f3f-9312-4d0e-93de-4216071bd711"
-                }
-              ]
-            },
-            "id": "bce4957c-86a9-44da-8b27-9918dc24971d",
-            "data": {
-              "type": "tm.Process",
-              "name": "Login Process",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "handlesCardPayment": false,
-              "handlesGoodsOrServices": false,
-              "isWebApplication": false,
-              "privilegeLevel": "",
-              "threats": []
-            }
-          },
-          {
-            "position": {
-              "x": -2577,
-              "y": -1790
-            },
-            "size": {
-              "width": 120,
-              "height": 60
-            },
-            "attrs": {
-              "text": {
-                "text": "H2 Database"
-              },
-              "topLine": {
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              },
-              "bottomLine": {
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "store",
-            "zIndex": 4,
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "6278c070-824a-4b8b-97bc-eda9e37bce50"
-                },
-                {
-                  "group": "right",
-                  "id": "f5640539-1e3a-4504-8b34-b5a812a3174f"
-                },
-                {
-                  "group": "bottom",
-                  "id": "e6ebd630-d973-4884-8e32-a6180839d2cb"
-                },
-                {
-                  "group": "left",
-                  "id": "a2d41194-740f-4447-af92-aec583181a24"
-                }
-              ]
-            },
-            "id": "2879d23b-ac69-4943-8f41-e09663a09d85",
-            "data": {
-              "type": "tm.Store",
-              "name": "H2 Database",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isALog": false,
-              "isEncrypted": false,
-              "isSigned": false,
-              "storesCredentials": false,
-              "storesInventory": false,
-              "threats": []
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Data Flow"
-            ],
-            "id": "6aabd444-5662-4b2f-8f13-0895d7406502",
-            "source": {
-              "x": -2940,
-              "y": -1790
-            },
-            "target": {
-              "x": -2840,
-              "y": -1690
-            }
-          },
-          {
             "shape": "flow",
             "attrs": {
               "line": {
@@ -743,6 +216,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -826,7 +300,6 @@
               ]
             },
             "id": "2502d73f-235a-459e-bf50-445ebe2314dc",
-            "zIndex": 11,
             "data": {
               "type": "tm.Process",
               "name": "Web Servlet",
@@ -863,6 +336,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -946,7 +420,6 @@
               ]
             },
             "id": "c61e27b8-7929-4150-aef0-26fb724875cb",
-            "zIndex": 12,
             "data": {
               "type": "tm.Actor",
               "name": "Users",
@@ -980,6 +453,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -1063,7 +537,6 @@
               ]
             },
             "id": "4d84b8f4-ae10-4bfb-b57b-d267530e4ce3",
-            "zIndex": 13,
             "data": {
               "type": "tm.Process",
               "name": "Login Process",
@@ -1076,7 +549,81 @@
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "31e6b457-127b-4f7a-a143-a50669d09d88",
+                  "title": "Login Process",
+                  "status": "Mitigated",
+                  "severity": "Critical",
+                  "type": "Tampering",
+                  "description": "Attacker can inject malicious SQL to bypass login",
+                  "mitigation": "BCrypt hashing strength 12 applied",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                },
+                {
+                  "id": "0f2b89c5-dd7e-47fb-a23c-897ebbf79296",
+                  "title": "Users",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Attacker user ki identity chura kar ya fake credentials ke zariye login kar sakta hai",
+                  "mitigation": "BCrypt password hashing (strength 12) aur logout par session invalidation ka istemal kiya gaya hai.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                },
+                {
+                  "id": "3d33376d-b256-4493-92b0-bb65de8fd20b",
+                  "title": "Web Servlet",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": " System error ya crash hone par sensitive stack trace ya internal details leak ho sakti hain.",
+                  "mitigation": "Custom error pages banaye gaye hain jo sirf generic message dikhate hain aur stack trace ko hide rakhte hain (server.error.include-stacktrace=never)",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                },
+                {
+                  "id": "d5a99aed-ee31-4a94-9ab5-c150bd9935bc",
+                  "title": "H2 Database",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": " Agar database connection secure na ho to data unauthorized taur par badla ja sakta hai.",
+                  "mitigation": "Parameterized queries aur Spring Data JPA ka istemal taake koi direct SQL manipulation na kar sake",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": ""
+                },
+                {
+                  "id": "861dafcc-8959-4d29-925f-c6d68fc59134",
+                  "title": "Data Flow",
+                  "status": "Mitigated",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Login request ka data (password) raste mein intercept (hijack) ho sakta hai.",
+                  "mitigation": "HTTPS aur secure cookie flags (HttpOnly, Secure, SameSite=Strict) ka istemal.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 3,
+                "tampering": 4,
+                "repudiation": 0,
+                "informationDisclosure": 3,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -1103,6 +650,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 14,
             "ports": {
               "groups": {
                 "top": {
@@ -1186,7 +734,6 @@
               ]
             },
             "id": "c1e90d91-4ce7-4b88-b12b-e6b396b4d9f8",
-            "zIndex": 14,
             "data": {
               "type": "tm.Store",
               "name": "H2 Database",
@@ -1209,6 +756,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 5
   }
 }
